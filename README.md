@@ -8,10 +8,12 @@ https://www.bis.org/statistics/full_data_sets.htm, which are updated by BIS on a
 
 Using SQLiteStudio is highly recommended. This excellent opensource interface program can be [downloaded here](https://sqlitestudio.pl/). 
 
+
 As of today, this project contains ETL pipelines available for the following datasets:
 * **Effective exchange rate indices (monthly)** => Nominal and real FX indices (broad, narrow) of more than 30 countries going back to 1960
 * **Policy rates (monthly)** => Central bank benchmark policy rates of more than 30 central banks going back to 1960
 *  More coming up...    
+
 
 ## What's in this repository
 * Python ETL scripts that parse and load BIS data into SQLite (required)
@@ -20,6 +22,7 @@ As of today, this project contains ETL pipelines available for the following dat
 * SQL script that inserts data into the 'country' table (optional)
 * A set of SQL scripts that create Views for data transformation (optional)
 * R script using Views for data analysis (optional)
+
 
 ## Instructions
 Required
