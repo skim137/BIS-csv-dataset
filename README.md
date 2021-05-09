@@ -25,7 +25,7 @@ As of today, this project contains ETL pipelines available for the following dat
 Required
 1. Save the raw CSV files (e.g. "BISWEB_EERDATAFLOW_csv_col.csv") to a folder location where the Python ETL scripts (e.g. "bixfx_etl.py") are saved.
 2. Execute the Python ETL scripts.
-3. Check the folder to see if a SQLite database file called "bis_stat.sqlite3" is created.
+3. Check the folder to see if an SQLite database file called "bis_stat.sqlite3" is created.
 
 Optional
 1. Execute the following SQL scripts in your SQLiteStudio:
