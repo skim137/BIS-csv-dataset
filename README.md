@@ -25,7 +25,7 @@ As of today, this project contains ETL pipelines for the following datasets:
 * SQL script that creates a mapping table called 'country'
 * SQL script that inserts mapping data into the 'country' table
 * A set of SQL scripts that create Views for further data transformation
-* R script using Views for data analysis (just a template)
+* R script example for data connection and analysis ("bisrate_analysis.r")
 
 
 ## Instructions
