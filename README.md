@@ -3,7 +3,7 @@ Create an ETL pipeline for csv datasets from BIS (Bank for International Settlem
 
 ## Background
 BIS provides their financial and international banking datasets (mostly time series) via the [BIS Statistics Explorer](https://stats.bis.org/statx/toc/LBS.html) and [BIS Statistics Warehouse](https://stats.bis.org/#ppq=CBS_C_AND_OTH_EXP_UR;pv=11~10,5,6~0,0,0~name) as well as the [SDMX web servies API](https://www.bis.org/statistics/sdmx_techspec.htm). If you are interested in working with their flat files, they are available here 
-https://www.bis.org/statistics/full_data_sets.htm, which are updated by BIS on a regular basis. However, one major issue with their flat files is that the data is already pivoted (aka. not tidy, see Exhibit 1). 
+https://www.bis.org/statistics/full_data_sets.htm, which are updated by BIS on a regular basis. However, one major issue with their flat files is that the data is already pivoted (aka. not tidy, see Exhibit 1 below). 
 
 This ETL pipeline project contains Python scripts that process BIS CSV files and insert the unpivoted data into a persistent SQLite database file. You can then access the SQLite file to transform the data the way you want it for your own purposes (e.g. connecting to a datalake, performing data analysis using Pandas, R, and etc.). Therefore, this solution is effective and scalable. 
 
@@ -27,15 +27,18 @@ As of today, this project contains ETL pipelines for the following datasets:
 
 ## Instructions
 1. Save raw CSV files (e.g. "BISWEB_EERDATAFLOW_csv_col.csv") in the same folder location where the Python ETL scripts (e.g. "bixfx_etl.py") are saved.
-2. Execute the Python ETL scripts using command line
-3. Check the folder to see if an SQLite database file called "bis_stat.sqlite3" is created. In the database files, there should be tables such as "bisfx_data".
-4. Execute the following SQL scripts in your SQLiteStudio (optional):
+2. Execute the Python ETL scripts 
+3. Check the folder to see if an SQLite database file called "bis_stat.sqlite3" is created. 
+4. In the database file, you should see tables such as "bisfx_data" (see Exhibit 2 below) 
+5. Execute the following SQL scripts in your SQLiteStudio (optional):
     - "CREATE TABLE country.sql"
     - "INSERT INTO country.sql"
     - "CREATE VIEW.sql" files
-5. Execute R scripts in your RGui or RStudio (optional).
+6. Execute R scripts in your RGui or RStudio (optional).
+7. When BIS uploads updated CSV files, repeat the process.
 
 
 ## Exhibit
-**Exhibit 1
+Exhibit 1
+
 ![how BIS raw file looks](https://github.com/skim137/BIS-csv-dataset/blob/38d5fd4ccf2b7749646c93857714d318c2e0b6a9/Exhibit1.JPG)
