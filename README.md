@@ -5,7 +5,7 @@ Create an ETL pipeline for csv datasets from BIS (Bank for International Settlem
 BIS provides their financial and international banking datasets (mostly time series) via the [BIS Statistics Explorer](https://stats.bis.org/statx/toc/LBS.html) and [BIS Statistics Warehouse](https://stats.bis.org/#ppq=CBS_C_AND_OTH_EXP_UR;pv=11~10,5,6~0,0,0~name) as well as the [SDMX web servies API](https://www.bis.org/statistics/sdmx_techspec.htm). If you are interested in working with flat files, they are available here 
 https://www.bis.org/statistics/full_data_sets.htm, which are updated by BIS on a regular basis. However, one major issue with their flat files is that the data is already pivoted (aka. not tidy, see Exhibit 1 below). 
 
-This ETL pipeline project contains Python scripts that process BIS CSV files and insert the extracted data into a persistent SQLite database table (See Exhibit 2 below). You can then access the SQLite file and the tables/views to transform the data the way you want it for your own purposes (e.g. connecting to a datalake, performing data analysis using Pandas, R, and etc.). 
+This ETL pipeline project contains Python scripts that process BIS CSV files and insert the extracted data into a persistent SQLite database table (See Exhibit 2 below). You can then access the tables & views within the SQLite file to transform the data the way you want it for your own purposes (e.g. connecting to a datalake, performing data analysis using Pandas, R, and etc.). 
 
 Using SQLiteStudio is highly recommended. This excellent open source interface program can be [downloaded here](https://sqlitestudio.pl/). 
 
@@ -47,9 +47,11 @@ Exhibit 1
 ![how BIS raw file looks](https://github.com/skim137/BIS-csv-dataset/blob/38d5fd4ccf2b7749646c93857714d318c2e0b6a9/Exhibit1.JPG)
 
 Exhibit 2
+
 ![how BIS data looks in SQL](https://github.com/skim137/BIS-csv-dataset/blob/5e2afeb1ac0ed65c07f6c500caf90dcd3fd707b6/Exhibit2.JPG)
 
 Exhibit 3
+
 ![bis_stat tables](https://github.com/skim137/BIS-csv-dataset/blob/5e2afeb1ac0ed65c07f6c500caf90dcd3fd707b6/Exhibit3.JPG)
 
 
