@@ -29,7 +29,7 @@ df_xts <- function(df){
 ##############################
 
 #Pull v_bisrate from SQLite and create a dataframe object
-dbfile <- "" # <--- File directory of your bis_stat db file is saved
+dbfile <- "" # <--- File directory of your bis_stat db file
 mydb <- dbConnect(RSQLite::SQLite(), dbfile)
 sqlstr <- "SELECT * FROM v_bisrate"
 data.df <- dbGetQuery(mydb, sqlstr)
