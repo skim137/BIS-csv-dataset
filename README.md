@@ -17,7 +17,7 @@ As of today, this project contains ETL pipelines for the following datasets:
 
 
 ## What's in this repository
-* Python ETL scripts that parse and load BIS data into SQLite
+* Python ETL scripts that parse and load BIS data into an SQLite file
 * BIS CSV files downloaded and unzipped
 * SQL script that creates a mapping table called 'country'
 * SQL script that inserts mapping data into the 'country' table
@@ -29,7 +29,7 @@ As of today, this project contains ETL pipelines for the following datasets:
 1. Save raw CSV files (e.g. "BISWEB_EERDATAFLOW_csv_col.csv") in the same folder location where the Python ETL scripts (e.g. "bixfx_etl.py") are saved.
 2. Execute the Python ETL scripts 
 3. Check the folder to see if an SQLite database file called "bis_stat.sqlite3" is created. 
-4. In the database file, you should see tables such as "bisfx_data" (see Exhibit 2 below) 
+4. In the database file, you should see tables such as "bisfx_data" (see Exhibit 2 below). 
 5. Execute the following SQL scripts in your SQLiteStudio (optional):
     - "CREATE TABLE country.sql"
     - "INSERT INTO country.sql"
@@ -40,5 +40,7 @@ As of today, this project contains ETL pipelines for the following datasets:
 
 ## Exhibit
 Exhibit 1
-
 ![how BIS raw file looks](https://github.com/skim137/BIS-csv-dataset/blob/38d5fd4ccf2b7749646c93857714d318c2e0b6a9/Exhibit1.JPG)
+
+Exhibit 2
+![SQLiteStudio Screenshot]
