@@ -9,7 +9,10 @@ This ETL pipeline project contains Python scripts that process BIS CSV files and
 
 Using SQLiteStudio is highly recommended. This excellent open source interface program can be [downloaded here](https://sqlitestudio.pl/). 
 
+Users are also expected to have some familiarity with the [sqlite3 module](https://docs.python.org/3/library/sqlite3.html#).
 
+
+## Dataset pipelines
 As of today, this project contains ETL pipelines for the following datasets:
 * **Effective exchange rate indices (monthly)** => Nominal and real FX indices (broad, narrow) of more than 30 countries going back to 1960
 * **Policy rates (monthly)** => Central bank benchmark policy rates of more than 30 central banks going back to 1960
@@ -27,7 +30,7 @@ As of today, this project contains ETL pipelines for the following datasets:
 
 ## Instructions
 1. Save raw CSV files (e.g. "BISWEB_EERDATAFLOW_csv_col.csv") in the same folder location where the Python ETL scripts (e.g. "bixfx_etl.py") are saved.
-2. Execute the Python ETL scripts 
+2. Execute the Python ETL scripts in the terminal or an IDE.
 3. Check the folder to see if an SQLite database file called "bis_stat.sqlite3" is created. 
 4. In the database file, you should see tables such as "bisfx_data" (see Exhibit 2 below). 
 5. Execute the following SQL scripts in your SQLiteStudio (optional):
@@ -40,7 +43,9 @@ As of today, this project contains ETL pipelines for the following datasets:
 
 ## Exhibit
 Exhibit 1
+
 ![how BIS raw file looks](https://github.com/skim137/BIS-csv-dataset/blob/38d5fd4ccf2b7749646c93857714d318c2e0b6a9/Exhibit1.JPG)
 
 Exhibit 2
-![SQLiteStudio Screenshot]
+
+![SQLiteStudio Screenshot](https://github.com/skim137/BIS-csv-dataset/blob/e9aeb260c8303d1b0c5c139ea85a4291501e0384/Exhibit2.JPG)
