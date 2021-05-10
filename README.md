@@ -7,7 +7,7 @@ https://www.bis.org/statistics/full_data_sets.htm, which are updated by BIS on a
 
 This ETL pipeline project contains Python scripts that process BIS CSV files and insert the extracted data into a persistent SQLite database table (See Exhibit 2 below). You can then access the tables & views within the SQLite file to transform the data the way you want it for your own purposes (e.g. connecting to a datalake, performing data analysis using Pandas, R, and etc.). 
 
-Using SQLiteStudio is highly recommended. This excellent open source interface program can be [downloaded here](https://sqlitestudio.pl/). 
+Using SQLiteStudio is highly recommended. This excellent open source interface program can be [downloaded here](https://sqlitestudio.pl/). For those who want to use the SQLite command line tools, download them from [here](https://www.sqlite.org/download.html). 
 
 Users are expected to have some familiarity with the [sqlite3 module](https://docs.python.org/3/library/sqlite3.html#).
 
@@ -22,8 +22,8 @@ As of today, this project contains ETL pipelines for the following datasets:
 ## What's in this repository
 * Python ETL scripts that parse and load BIS data into an SQLite file
 * BIS CSV files downloaded and unzipped
-* SQL script that creates a mapping table called 'country'
-* SQL script that inserts mapping data into the 'country' table
+* An SQL script that creates a mapping table called 'country'
+* An SQL script that inserts mapping data into the 'country' table
 * A set of SQL scripts that create Views for further data transformation
 * R script example for data connection and analysis ("bisrate_analysis.r")
 
@@ -33,10 +33,11 @@ As of today, this project contains ETL pipelines for the following datasets:
 2. Execute the Python ETL scripts in the terminal or an IDE.
 3. Check the folder to see if an SQLite database file called "bis_stat.sqlite3" is created. 
     - In the database file, you should see tables such as "bisfx_data" (see Exhibit 3 below). 
-5. Execute the following SQL scripts in your SQLiteStudio (optional):
+5. Execute the following SQL scripts:
     - "CREATE TABLE country.sql"
     - "INSERT INTO country.sql"
-    - "CREATE VIEW.sql" files
+    - "CREATE VIEW xxxx.sql" files
+        - Feel free to modify them based on your needs     
 6. Execute R scripts in your RGui or RStudio (optional).
 7. When BIS posts updated CSV files, repeat the process.
 
