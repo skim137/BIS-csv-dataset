@@ -47,5 +47,9 @@ Exhibit 1
 ![how BIS raw file looks](https://github.com/skim137/BIS-csv-dataset/blob/38d5fd4ccf2b7749646c93857714d318c2e0b6a9/Exhibit1.JPG)
 
 Exhibit 2
+![how BIS data looks in SQL](https://github.com/skim137/BIS-csv-dataset/blob/5e2afeb1ac0ed65c07f6c500caf90dcd3fd707b6/Exhibit2.JPG)
+
+Exhibit 3
+![bis_stat tables](https://github.com/skim137/BIS-csv-dataset/blob/5e2afeb1ac0ed65c07f6c500caf90dcd3fd707b6/Exhibit3.JPG)
 
 
