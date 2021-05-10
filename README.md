@@ -5,7 +5,7 @@ Create an ETL pipeline for csv datasets from BIS (Bank for International Settlem
 BIS provides their financial and international banking datasets (mostly time series) via the [BIS Statistics Explorer](https://stats.bis.org/statx/toc/LBS.html) and [BIS Statistics Warehouse](https://stats.bis.org/#ppq=CBS_C_AND_OTH_EXP_UR;pv=11~10,5,6~0,0,0~name) as well as the [SDMX web servies API](https://www.bis.org/statistics/sdmx_techspec.htm). If you are interested in working with their flat files, they are available here 
 https://www.bis.org/statistics/full_data_sets.htm, which are updated by BIS on a regular basis. However, one major issue with their flat files is that the data is already pivoted (aka. not tidy, see Exhibit 1 below). 
 
-This ETL pipeline project contains Python scripts that process BIS CSV files and insert the unpivoted data into a persistent SQLite database file. You can then access the SQLite file to transform the data the way you want it for your own purposes (e.g. connecting to a datalake, performing data analysis using Pandas, R, and etc.). Therefore, this solution is effective and scalable. 
+This ETL pipeline project contains Python scripts that process BIS CSV files and insert extracted data into a persistent SQLite database table (See Exhibit 2 below). You can then access the SQLite file and the tables to transform the data the way you want it for your own purposes (e.g. connecting to a datalake, performing data analysis using Pandas, R, and etc.). 
 
 Using SQLiteStudio is highly recommended. This excellent open source interface program can be [downloaded here](https://sqlitestudio.pl/). 
 
@@ -48,4 +48,4 @@ Exhibit 1
 
 Exhibit 2
 
-![SQLiteStudio Screenshot](https://github.com/skim137/BIS-csv-dataset/blob/e9aeb260c8303d1b0c5c139ea85a4291501e0384/Exhibit2.JPG)
+
